@@ -11,15 +11,15 @@ const FooterContainer = styled.div`
   right: 0px;
   left: 0px;
   flex-direction: column;
-
   text-align: center;
+  font-size: 20px;
 `;
 
 const Footer = () => {
   return (
     <>
       <FooterContainer>
-        <h6>© 2022 By America Latina</h6>
+        <h6>© 2022 BY AMERICA LATINA</h6>
       </FooterContainer>
     </>
   );
