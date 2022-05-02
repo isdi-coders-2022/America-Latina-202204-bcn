@@ -27,9 +27,7 @@ const AlbumContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <AlbumContext.Provider value={{ albums, setAlbums }}>
-      {children}
-    </AlbumContext.Provider>
+    <AlbumContext.Provider value={{ albums }}>{children}</AlbumContext.Provider>
   );
 };
 
