@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  display: flex;
   background-color: #fd6262;
+  display: flex;
   border: 0px solid;
-  position: sticky;
+  position: absolute;
+  bottom: 0;
   justify-content: space-between;
-  align-items: center;
-  top: 0;
   margin: 0px;
-  width: 100vh;
+  right: 0px;
+  left: 0px;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
 `;
 
 const Footer = () => {
   return (
     <>
       <FooterContainer>
-        <h6>© 2022 By America Latina</h6>
+        <h6>© 2022 BY AMERICA LATINA</h6>
       </FooterContainer>
     </>
   );

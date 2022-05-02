@@ -9,6 +9,8 @@ const Navigation = styled.nav`
   align-items: center;
   height: 60px;
   top: 0;
+  right: 0px;
+  left: 0px;
 
   ul {
     display: flex;
@@ -17,7 +19,6 @@ const Navigation = styled.nav`
     padding-left: 0px;
   }
   li {
-    border: 0.5px solid;
     height: 55px;
     padding: 2px;
     display: flex;
