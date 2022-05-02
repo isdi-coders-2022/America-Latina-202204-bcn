@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  display: flex;
   background-color: #fd6262;
+  display: flex;
   border: 0px solid;
-  position: sticky;
+  position: absolute;
+  bottom: 0;
   justify-content: space-between;
-  align-items: center;
-  top: 0;
   margin: 0px;
-  width: 100vh;
+  right: 0px;
+  left: 0px;
+  flex-direction: column;
+
+  text-align: center;
 `;
 
 const Footer = () => {
