@@ -25,7 +25,7 @@ const AlbumContainer = styled.div`
 const Album = ({ albumInfo }) => {
   return (
     <AlbumContainer>
-      <img src={albumInfo.image[3]["#text"]} alt={albumInfo.name} />
+      <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
       <h5>{albumInfo.artist}</h5>
       <h5>{albumInfo.name}</h5>
     </AlbumContainer>

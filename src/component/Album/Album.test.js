@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Album from "./Album";
 import AlbumContextProvider from "../../contexts/Album/AlbumContextProvider";
+import { useContext } from "react";
+import AlbumContext from "../../contexts/Album/AlbumContext";
 
 describe("Given the Album component", () => {
   describe("When it is is rendered", () => {
@@ -54,6 +56,15 @@ describe("Given the Album component", () => {
 
       expect(searchedHeaders.length).toBe(expectedHeaders);
       expect(searchedImage.length).toBe(expectedImage);
+    });
+  });
+  describe("When the AlbumContextProvider is wrapped around it and the first album is passed on to Album", () => {
+    test("Then the Linkin Park artist and Minutes to Midnight title will be displayed", () => {
+      render(
+        <AlbumContextProvider value={albums}>
+          <p>{albums[0].artist}</p>
+        </AlbumContextProvider>
+      );
     });
   });
 });
