@@ -31,7 +31,6 @@
 #### Renderizes main page when route is “main”
 
 - Renderizes header component with button action to change status to “complete-collection” and another to change status to “my-collection”.
-- Renderizes search component, passing action to search
 - Renderizes main image and text
 - Renderizes “complete collection” title with 9 card components received from card context.
 - Renderizes button with “next page” text and action to advance
@@ -43,7 +42,6 @@
 - Renderizes header component with button action to change status to “complete-collection” and another to change status to “my-collection”.
 - Renderizes “My playlist” title
 - Renderizes form with a button, which contains an action to submit the album.
-- Renderizes search component, passing action to search
 - Renderizes 9 card components received from local API.
 - Renderizes button with “next page” text and action to advance
 - Renderizes button with “previous page” text and action to go back
@@ -53,6 +51,7 @@
 
 - Renderizes header component with button action to change status to “complete-collection” and another to change status to “my-collection”.
 - Renderizes “My collection” title
+- Renderizes search button, passing text and action to filter by tag (which is the same as text)
 - Renderizes all card components available in collectionContext..
 - Renderizes album detail page when current page status is “album-detail”
 - Renderizes header component with button action to change status to “complete-collection” and another to change status to “my-collection”.
@@ -64,7 +63,7 @@
 - Renderizes information
 - Renderizes buttons with received actions
 
-### Search bar
+### Filter bar
 
 - Renderizes search bar
 - Renderizes search button with received action
