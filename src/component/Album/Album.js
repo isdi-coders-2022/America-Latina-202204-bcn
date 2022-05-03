@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import AlbumContext from "../../contexts/Album/AlbumContext";
 
 const AlbumContainer = styled.div`
   padding: 15px;
@@ -24,20 +22,14 @@ const AlbumContainer = styled.div`
   }
 `;
 
-const Album = () => {
-  const { albums } = useContext(AlbumContext);
-  if (albums.length > 0) {
-    return (
-      <AlbumContainer>
-        <img
-          src={albums[0].album.image[3]["#text"]}
-          alt={albums[0].album.name}
-        />
-        <h5>{albums[0].album.artist}</h5>
-        <h5>{albums[0].album.name}</h5>
-      </AlbumContainer>
-    );
-  }
+const Album = ({ albumInfo }) => {
+  return (
+    <AlbumContainer>
+      <img src={albumInfo.image[3]["#text"]} alt={albumInfo.name} />
+      <h5>{albumInfo.artist}</h5>
+      <h5>{albumInfo.name}</h5>
+    </AlbumContainer>
+  );
 };
 
 export default Album;
