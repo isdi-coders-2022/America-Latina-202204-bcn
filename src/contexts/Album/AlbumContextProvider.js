@@ -7,7 +7,7 @@ const AlbumContextProvider = ({ children }) => {
     const apiKey = `0ceed9a664f141e91291c54a6c867b86`;
     const getAlbumData = async (tag) => {
       const responseAlbums = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tag}&api_key=${apiKey}&limit=100&format=json`
+        `https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=${tag}&api_key=${apiKey}&limit=1&format=json`
       );
       const responseAlbumsJson = await responseAlbums.json();
       const filteredAlbums = responseAlbumsJson.albums.album.filter(
@@ -16,7 +16,7 @@ const AlbumContextProvider = ({ children }) => {
       const albumList = await Promise.all(
         filteredAlbums.map(async (albumId) => {
           const responseAlbum = await fetch(
-            `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${apiKey}&mbid=${albumId.mbid}&format=json`
+            `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${apiKey}&mbid=${albumId.mbid}&format=json`
           );
           return responseAlbum.json();
         })
