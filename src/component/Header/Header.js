@@ -33,6 +33,7 @@ const Navigation = styled.nav`
     text-decoration: none;
     color: black;
     padding: 5px;
+    padding-top: 10px;
     text-align: center;
   }
 `;
