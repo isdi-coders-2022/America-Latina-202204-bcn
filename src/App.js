@@ -43,11 +43,7 @@ function App() {
   return (
     <>
       <Header />
-
-
-
-      <Album albumInfo={album} />
-
+      <Album albumInfo={album} />;
       <Footer />
     </>
   );
