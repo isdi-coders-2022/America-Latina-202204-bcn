@@ -16,7 +16,7 @@ describe("Given a Button component", () => {
     test("Then it should render the text in a button", () => {
       const inputText = "Add to collection";
 
-      render(<Button type="form" text={inputText} />);
+      render(<Button type="modifyInfo" text={inputText} />);
       const searchedResult = screen.getByText(inputText);
       expect(searchedResult).toBeInTheDocument();
     });
