@@ -42,12 +42,12 @@ function App() {
   //     },
   //   ],
   // };
-  const { album } = useContext(AlbumContext);
+  const { albums } = useContext(AlbumContext);
   return (
     <>
-      <AlbumContext.Provider value={album}>
+      <AlbumContext.Provider value={albums}>
         <Header />
-        <Album albumInfo={album} />
+        {albums.length && <Album albumInfo={albums[0].album} />}
         <Footer />
       </AlbumContext.Provider>
     </>

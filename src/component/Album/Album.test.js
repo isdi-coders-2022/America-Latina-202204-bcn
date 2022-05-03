@@ -58,13 +58,4 @@ describe("Given the Album component", () => {
       expect(searchedImage.length).toBe(expectedImage);
     });
   });
-  describe("When the AlbumContextProvider is wrapped around it and the first album is passed on to Album", () => {
-    test("Then the Linkin Park artist and Minutes to Midnight title will be displayed", () => {
-      render(
-        <AlbumContextProvider value={albums}>
-          <p>{albums[0].artist}</p>
-        </AlbumContextProvider>
-      );
-    });
-  });
 });
