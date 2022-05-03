@@ -6,10 +6,11 @@ const FooterContainer = styled.div`
   border: 0px solid;
   position: absolute;
   bottom: 0;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0px;
   right: 0px;
   left: 0px;
+  height: 60px;
   flex-direction: column;
   text-align: center;
   font-size: 20px;
