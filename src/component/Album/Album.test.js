@@ -1,8 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Album from "./Album";
 import AlbumContextProvider from "../../contexts/Album/AlbumContextProvider";
-import { useContext } from "react";
-import AlbumContext from "../../contexts/Album/AlbumContext";
 
 describe("Given the Album component", () => {
   describe("When it is is rendered", () => {
