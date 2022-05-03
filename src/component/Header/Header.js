@@ -20,7 +20,7 @@ const Navigation = styled.nav`
     margin-top: 0px;
   }
   li {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     justify-content: space-between;
     height: 55px;
@@ -32,7 +32,8 @@ const Navigation = styled.nav`
   a {
     text-decoration: none;
     color: black;
-    padding: 5px;
+    padding: 10px;
+    padding-top: 10px;
     text-align: center;
   }
 `;
