@@ -2,6 +2,7 @@ import Footer from "./component/Footer/Footer";
 
 import Header from "./component/Header/Header";
 import Album from "./component/Album/Album";
+import MainInformation from "./component/MainInformation/MainInformation";
 
 function App() {
   const album = {
@@ -43,7 +44,11 @@ function App() {
   return (
     <>
       <Header />
-      <Album albumInfo={album} />;
+
+      <MainInformation />
+
+      <Album albumInfo={album} />
+
       <Footer />
     </>
   );
