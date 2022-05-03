@@ -8,7 +8,7 @@ describe("Given a Header component", () => {
       render(<Header />);
 
       const searchedResult = screen.getAllByRole("listitem");
-      expect(searchedResult.length).toBe(expectedListitens);
+      expect(searchedResult).toHaveLength(expectedListitens);
     });
   });
   describe("When it receives a `nav`", () => {
@@ -17,7 +17,7 @@ describe("Given a Header component", () => {
       render(<Header />);
 
       const searchResult = screen.getAllByRole("navigation");
-      expect(searchResult.length).toBe(expectedResult);
+      expect(searchResult).toHaveLength(expectedResult);
     });
   });
 });
