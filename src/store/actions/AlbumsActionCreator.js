@@ -5,8 +5,9 @@ import {
   deleteAlbumsType,
 } from "./AlbumsActionTypes";
 
-export const loadAlbumsAction = () => ({
+export const loadAlbumsAction = (loadedAlbums) => ({
   type: loadAlbumsType,
+  loadedAlbums,
 });
 
 export const addAlbumsAction = (albumToAdd) => ({
