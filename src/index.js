@@ -10,9 +10,9 @@ root.render(
   <React.StrictMode>
 
       <AlbumProvider>
-       <BrowserRouter>
-         <App />
-       </BrowserRouter>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
       </AlbumProvider>
 
   </React.StrictMode>
