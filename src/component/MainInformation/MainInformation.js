@@ -22,6 +22,7 @@ const MainInformation = () => {
         alt="personas alegres escuchadno musica"
       />
       <Informatio>
+        <p>hola</p>
         <p>
           Bienvenido a la colección de álbumes que marcaron época en la música y
           que no pueden faltar en la playlist de un Hombre Esquire. ¿Cuántos has
