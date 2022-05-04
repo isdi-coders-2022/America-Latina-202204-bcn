@@ -5,9 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CompleteCollection from "./pages/CompleteCollectionPage/CompleteCollection";
 import MyPlaylistPage from "./pages/MyPlaylist/MyPlaylistPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
-import Form from "./component/Form/Form";
-{
-  /*
+
 function App() {
   return (
     <>
@@ -24,16 +22,5 @@ function App() {
     </>
   );
 }
-*/
-}
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Form />
-      <Footer />
-    </>
-  );
-}
 export default App;
