@@ -1,10 +1,4 @@
-import { addAlbumsAction } from "../actions/AlbumsActionCreator";
-import {
-  loadAlbumsType,
-  addAlbumsType,
-  modifyAlbumsType,
-  deleteAlbumsType,
-} from "../actions/AlbumsActionTypes";
+import { addAlbumsType } from "../actions/AlbumsActionTypes";
 
 const albumReducer = (currentAlbums, action) => {
   let newAlbums;

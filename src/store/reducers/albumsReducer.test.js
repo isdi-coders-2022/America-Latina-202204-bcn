@@ -7,7 +7,6 @@ describe("Given the addAlbumFunction passed on to the reducer and an initial arr
       const originalArray = albums;
       const albumToBeAdded = { title: "New added album" };
       const usedAction = addAlbumsAction(albumToBeAdded);
-
       const newArray = albumReducer(originalArray, usedAction);
       const expectedArray = [...originalArray, albumToBeAdded];
       expect(newArray).toEqual(expectedArray);
