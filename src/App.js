@@ -1,4 +1,3 @@
-
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
@@ -6,6 +5,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import CompleteCollection from "./pages/CompleteCollectionPage/CompleteColection";
 import MyPlaylistPage from "./pages/MyPlaylist/MyPlaylist";
 import DetailPage from "./pages/DetailPage/DetailPage";
+import Form from "./component/Form/Form";
+{
+  /*
 function App() {
   return (
     <>
@@ -19,9 +21,19 @@ function App() {
       </Routes>
 
       <Footer />
-
     </>
   );
 }
+*/
+}
 
+function App() {
+  return (
+    <>
+      <Header />
+      <Form />
+      <Footer />
+    </>
+  );
+}
 export default App;
