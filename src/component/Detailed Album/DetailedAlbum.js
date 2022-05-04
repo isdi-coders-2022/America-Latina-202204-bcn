@@ -7,22 +7,44 @@ const DetailedAlbumContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: auto;
-  padding: 10px;
 
   img {
-    width: auto;
+    width: 100%;
   }
-  .detailed_album--info {
-    display: inline-block;
+  h6.detailed_album--info {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    width: 100%;
+    font-size: 15px;
   }
+
+  .detailed_album--title span {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
   h5 {
-    margin: 5px;
+    margin: 15px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
+
   .pagination_buttons {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  h6.detailed_album--tracklist {
+    font-size: 20px;
   }
 `;
 
@@ -30,15 +52,17 @@ const DetailedAlbum = ({ albumInfo }) => {
   return (
     <>
       <DetailedAlbumContainer>
-        <h5>{albumInfo.artist}</h5>
-        <h5>{albumInfo.name}</h5>
+        <h5 className="detailed_album--title">
+          <span>{albumInfo.artist}</span>
+          <span>{albumInfo.name}</span>
+        </h5>
         <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
-        <div className="detailed_album--info">
-          <h6>Genre: {albumInfo.tags.tag[0].name}</h6>
-          <h6>Release Date: {albumInfo.wiki.published}</h6>
-        </div>
-        <h5>Tracklist</h5>
-        <h6>{albumInfo.wiki.summary}</h6>
+        <h6 className="detailed_album--info">
+          <span>Genre: {albumInfo.tags.tag[2].name}</span>
+          <span>Release Date: {albumInfo.wiki.published}</span>
+        </h6>
+        <h6 className="detailed_album--tracklist">Tracklist</h6>
+        <p>{albumInfo.wiki.summary}</p>
         <Button type="modifyInfo" text="Modify information" />
         <div className="pagination_buttons">
           <Button type="pagination" text="Previous Page" />

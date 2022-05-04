@@ -17,7 +17,7 @@ const ModifyInfoButton = styled.button`
   color: black;
   border-radius: 5px;
   border-style: none;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const Button = ({ text, action, type }) => {
