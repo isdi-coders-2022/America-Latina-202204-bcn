@@ -4,7 +4,7 @@ import Footer from "./component/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import CompleteCollection from "./pages/CompleteCollectionPage/CompleteColection";
 import MyPlaylistPage from "./pages/MyPlaylist/MyPlaylist";
-import DetailPage from "./pages/DetailPage/DetailsPage";
+import DetailPage from "./pages/DetailPage/DetailPage";
 function App() {
   return (
     <>
