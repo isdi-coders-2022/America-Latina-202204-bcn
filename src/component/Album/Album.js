@@ -2,18 +2,20 @@ import styled from "styled-components";
 
 const AlbumContainer = styled.div`
   padding: 15px;
+  padding-left: 0px;
   width: 40px;
   display: flex;
   flex-direction: column;
   width: 100vw;
   align-items: center;
   img {
-    width: 100vw;
+    width: 200px;
+    border: 2px solid;
   }
   h5 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
     padding: 7px 0 0 0;
     &:last-child {
