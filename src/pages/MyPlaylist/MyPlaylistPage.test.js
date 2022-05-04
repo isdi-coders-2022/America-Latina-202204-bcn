@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MyPlaylistPage from "./MyPlaylist";
+import MyPlaylistPage from "./MyPlaylistPage";
 
 describe("Given a DetailPage Component", () => {
   describe("Whne it receives a text content `  esta es la pagina de mis playlist`", () => {
