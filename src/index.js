@@ -9,11 +9,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
 
-     <AlbumProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-     </AlbumProvider>
+      <AlbumProvider>
+       <BrowserRouter>
+         <App />
+       </BrowserRouter>
+      </AlbumProvider>
 
   </React.StrictMode>
 );
