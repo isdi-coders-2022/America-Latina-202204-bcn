@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PaginationButton = styled.button`
-  height: 55px;
   width: 100px;
   background-color: white;
   color: black;
@@ -18,7 +17,7 @@ const ModifyInfoButton = styled.button`
   color: black;
   border-radius: 5px;
   border-style: none;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 const Button = ({ text, action, type }) => {
