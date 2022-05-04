@@ -45,7 +45,7 @@ describe("Given the modifyAlbums Action", () => {
 
       const expectedObject = {
         type: "modify-album",
-        albumToModify: toBeModified,
+        albumIdToModify: toBeModified,
         newProperties: modifiedProperties,
       };
 

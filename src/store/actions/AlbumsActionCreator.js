@@ -14,9 +14,9 @@ export const addAlbumsAction = (albumToAdd) => ({
   albumToAdd,
 });
 
-export const modifyAlbumsAction = (albumToModify, newProperties) => ({
+export const modifyAlbumsAction = (albumIdToModify, newProperties) => ({
   type: modifyAlbumsType,
-  albumToModify,
+  albumIdToModify,
   newProperties,
 });
 

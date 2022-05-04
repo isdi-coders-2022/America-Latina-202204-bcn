@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const apiKey = `93016a5645881e6988acd0603a11dd31`;
 const useApi = (tag) => {
-  //const [albums, setAlbums] = useState([]);
+  const [result, setResult] = useState([]);
   useEffect(() => {
     const getAlbumData = async (tag) => {
       const responseAlbums = await fetch(
@@ -20,10 +20,11 @@ const useApi = (tag) => {
           return responseAlbum.json();
         })
       );
-      return albumList;
+      setResult(albumList);
     };
     getAlbumData(tag);
   }, [tag]);
+  return result;
 };
 
 export default useApi;
