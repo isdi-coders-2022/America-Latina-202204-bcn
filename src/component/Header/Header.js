@@ -1,3 +1,4 @@
+import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = styled.nav`
@@ -43,16 +44,17 @@ const Header = () => {
     <Navigation className="main-navigation">
       <ul>
         <li>
-          <a href=".">COMPLETE COLLECTION</a>
+          <Link to="/complete-Collection">COMPLETE COLLECTION</Link>
         </li>
         <li>
-          <a href=".">APOLLO COLLECTION</a>
+          <Link to="/home">APOLLO COLLECTION</Link>
         </li>
         <li>
-          <a href=".">MY PLAYLIST</a>
+          <Link to="/my-playlist">MY PLAYLIST</Link>
         </li>
       </ul>
     </Navigation>
   );
 };
+
 export default Header;
