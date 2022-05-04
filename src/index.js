@@ -2,17 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import AlbumContextProvider from "./contexts/Album/AlbumContextProvider";
+import AlbumProvider from "./store/contexts/AlbumsProvider";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AlbumContextProvider>
-      <BrowserRouter>
+    <AlbumProvider>
+    <BrowserRouter>
         <App />
       </BrowserRouter>
-    </AlbumContextProvider>
+    </AlbumProvider>
   </React.StrictMode>
 );
 
