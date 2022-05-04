@@ -3,7 +3,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import CompleteCollection from "./pages/CompleteCollectionPage/CompleteColection";
-import MyPlaylistPage from "./pages/MyPlaylisgt/MyPlaylist";
+import MyPlaylistPage from "./pages/MyPlaylist/MyPlaylist";
 import DetailPage from "./pages/DetailPage/DetailsPage";
 function App() {
   return (
