@@ -32,9 +32,9 @@ describe("Given the modifyAlbumFunction passed on to the reducer", () => {
   });
 });
 
-describe("Given the modifyAlbumFunction passed on to the reducer, the properties {new-property} and the identificator Linkin Park-Minutes to Midnight", () => {
-  describe("When the object {title: 'New added album'} is passed on to the reducer", () => {
-    test("Then it will return a new array which extends the initial array to having the new object", () => {
+describe("Given the deleteAlbumFunction passed on to the reducer", () => {
+  describe("When the the identificator Linkin Park-Minutes to Midnight is passed on to the reducer", () => {
+    test("Then it will return an empty array", () => {
       const originalArray = albums;
       const albumToBeDeleted = "Linkin Park-Minutes to Midnight";
       const usedAction = deleteAlbumsAction(albumToBeDeleted);
