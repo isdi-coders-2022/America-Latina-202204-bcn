@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const apiKey = `93016a5645881e6988acd0603a11dd31`;
 const useApi = (tag) => {
