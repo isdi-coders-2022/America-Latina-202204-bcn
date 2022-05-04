@@ -1,13 +1,23 @@
-/*import Album from "./component/Album/Album";
-import AlbumContext from "./contexts/Album/AlbumContext";
-import { useContext } from "react";*/
-import MyCollectionPage from "./pages/MyCollectionPage/MyCollectonsPage";
-
+import { Navigate, Route, Routes } from "react-router-dom";
+import Header from "./component/Header/Header";
+import Footer from "./component/Footer/Footer";
+import HomePage from "./pages/HomePage/HomePage";
+import CompleteCollection from "./pages/CompleteCollectionPage/CompleteColection";
+import MyPlaylistPage from "./pages/MyPlaylisgt/MyPlaylist";
+import DetailPage from "./pages/DetailPage/DetailsPage";
 function App() {
-  /* const { albums } = useContext(AlbumContext);*/
   return (
     <>
-      <MyCollectionPage />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/my-playlist" element={<MyPlaylistPage />} />
+        <Route path="/complete-collection" element={<CompleteCollection />} />
+        <Route path="/detail-page" element={<DetailPage />} />
+      </Routes>
+
+      <Footer />
     </>
   );
 }
