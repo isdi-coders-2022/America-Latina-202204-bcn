@@ -4,7 +4,6 @@ const FooterContainer = styled.div`
   background-color: #fd6262;
   display: flex;
   border: 0px solid;
-  position: absolute;
   bottom: 0;
   justify-content: center;
   margin: 0px;

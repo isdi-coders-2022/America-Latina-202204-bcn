@@ -6,6 +6,7 @@ function App() {
     <>
       <MyCollectionPage />
       <Button type="modifyInfo" text="test button" />
+
     </>
   );
 }
