@@ -1,6 +1,6 @@
-import AlbumsContext from "./AlbumsContext";
+import AlbumsContext from "./AlbumContext";
 import { useEffect, useReducer } from "react";
-import albumReducer from "../reducers/albumsReducer";
+import albumReducer from "../reducers/albumReducer";
 import { loadAlbumsAction } from "../actions/AlbumsActionCreator";
 
 const AlbumProvider = ({ children }) => {
