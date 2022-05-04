@@ -1,14 +1,14 @@
-import { loadAlbumsAction } from "../actions/AlbumsActionCreator";
+import { addAlbumsType } from "../actions/AlbumsActionTypes";
 
 const albumReducer = (currentAlbums, action) => {
   let newAlbums;
 
   switch (action.type) {
-    case loadAlbumsAction:
-      newAlbums = { test: currentAlbums.test + 1 };
+    case addAlbumsType:
+      newAlbums = [...currentAlbums, action.albumToAdd];
       break;
     default:
-      newAlbums = { ...currentAlbums };
+      newAlbums = [...currentAlbums];
       break;
   }
   return newAlbums;
