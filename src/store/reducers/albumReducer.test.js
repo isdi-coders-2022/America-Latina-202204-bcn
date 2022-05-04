@@ -3,6 +3,7 @@ import {
   addAlbumsAction,
   deleteAlbumsAction,
   modifyAlbumsAction,
+  loadAlbumsAction,
 } from "../actions/AlbumsActionCreator";
 import albumReducer from "./albumReducer";
 
@@ -41,6 +42,21 @@ describe("Given the deleteAlbumFunction passed on to the reducer", () => {
       const usedAction = deleteAlbumsAction(albumToBeDeleted);
       const newArray = albumReducer(originalArray, usedAction);
       const expectedArray = [];
+      expect(newArray).toEqual(expectedArray);
+    });
+  });
+});
+
+describe("Given the loadAlbumFunction passed on to the reducer", () => {
+  describe("When the array [1,2,3] passed on to the reducer", () => {
+    test("Then it will return this same array", () => {
+      const inputtedArray = [1, 2, 3];
+      const originalArray = [4, 5, 6];
+
+      const usedAction = loadAlbumsAction(inputtedArray);
+      const newArray = albumReducer(originalArray, usedAction);
+
+      const expectedArray = inputtedArray;
       expect(newArray).toEqual(expectedArray);
     });
   });
