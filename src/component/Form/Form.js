@@ -40,10 +40,6 @@ const StyledForm = styled.div`
 `;
 
 const Form = () => {
-  const onSubmit = () => {
-    console.log("submitting...");
-  };
-
   return (
     <>
       <StyledForm>
@@ -77,7 +73,7 @@ const Form = () => {
             Summary
           </label>
           <input className="input-summary" id="summary" type="text"></input>
-          <button onClick={onSubmit}>Modify Information</button>
+          <button>Modify Information</button>
         </form>
       </StyledForm>
     </>
