@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PaginationButton = styled.button`
-  height: 55px;
   width: 100px;
   background-color: white;
   color: black;
