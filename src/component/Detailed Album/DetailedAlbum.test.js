@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AlbumContextProvider from "../../contexts/Album/AlbumContextProvider";
+import AlbumProvider from "../../store/contexts/AlbumProvider";
 import DetailedAlbum from "./DetailedAlbum";
 
 describe("Given a DetailedAlbum Component", () => {
@@ -286,9 +286,9 @@ describe("Given a DetailedAlbum Component", () => {
         },
       };
       render(
-        <AlbumContextProvider>
+        <AlbumProvider>
           <DetailedAlbum albumInfo={album.album} />
-        </AlbumContextProvider>
+        </AlbumProvider>
       );
       const searchedHeaders = screen.getAllByRole("heading");
       const searchedImage = screen.getAllByRole("img");

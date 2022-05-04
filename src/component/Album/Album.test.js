@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Album from "./Album";
-import AlbumContextProvider from "../../contexts/Album/AlbumContextProvider";
+import AlbumProvider from "../../store/contexts/AlbumProvider";
 
 describe("Given the Album component", () => {
   describe("When it is is rendered with the object corresponding to Minutes to Midnight", () => {
@@ -42,9 +42,9 @@ describe("Given the Album component", () => {
     };
     test("Then an image and two headers will be shown", () => {
       render(
-        <AlbumContextProvider>
+        <AlbumProvider>
           <Album albumInfo={album} />
-        </AlbumContextProvider>
+        </AlbumProvider>
       );
       const searchedHeaders = screen.getAllByRole("heading");
       const searchedImage = screen.getAllByRole("img");
@@ -57,9 +57,9 @@ describe("Given the Album component", () => {
     });
     test("Then the first title should be 'Linkin Park' and the second one 'Minutes to Midnight'", () => {
       render(
-        <AlbumContextProvider>
+        <AlbumProvider>
           <Album albumInfo={album} />
-        </AlbumContextProvider>
+        </AlbumProvider>
       );
       const searchedFirstHeader = screen.getAllByRole("heading")[0];
       const searchedSecondHeader = screen.getAllByRole("heading")[1];
