@@ -84,7 +84,13 @@ const DetailedAlbum = ({ albumInfo }) => {
             <span>Release Date: {albumInfo.wiki.published}</span>
           </h6>
           <h6 className="detailed_album--tracklist">Tracklist</h6>
-          <p>{albumInfo.wiki.summary}</p>
+          <p>
+            {albumInfo.wiki.summary.slice(
+              0,
+              -albumInfo.wiki.summary.length -
+                albumInfo.wiki.summary.indexOf("<a href")
+            )}
+          </p>
           <Button
             className="Button__modify"
             action={() => {
