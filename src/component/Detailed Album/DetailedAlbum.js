@@ -50,9 +50,9 @@ const DetailedAlbumContainer = styled.div`
     margin-bottom: 20px;
   }
   p {
-    border: 2px solid;
+    text-align: center;
     font-size: 15px;
-    width: 300px;
+    width: 296px;
     display: flex;
     flex-direction: column;
   }
@@ -73,6 +73,8 @@ const DetailedAlbumContainer = styled.div`
 
 const DetailedAlbum = ({ albumInfo }) => {
   const { myCollectionDispatch } = useContext(AlbumContext);
+  const indexToDelete =
+    albumInfo.wiki.summary.length - albumInfo.wiki.summary.indexOf("<a href");
   return (
     <>
       {albumInfo.image !== undefined && (
@@ -90,13 +92,7 @@ const DetailedAlbum = ({ albumInfo }) => {
             <span>Release Date: {albumInfo.wiki.published}</span>
           </h6>
           <h6 className="detailed_album--tracklist">Summary</h6>
-          <p>
-            {albumInfo.wiki.summary.slice(
-              0,
-              -albumInfo.wiki.summary.length -
-                albumInfo.wiki.summary.indexOf("<a href")
-            )}
-          </p>
+          <p>{albumInfo.wiki.summary.slice(0, -indexToDelete)}</p>
           <Button
             className="Button__modify"
             action={() => {
