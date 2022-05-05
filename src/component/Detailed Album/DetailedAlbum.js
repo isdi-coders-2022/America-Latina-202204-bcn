@@ -1,5 +1,8 @@
 import Button from "../Button/Button";
 import styled from "styled-components";
+import { useContext } from "react";
+import AlbumContext from "../../store/contexts/AlbumContext";
+import { addAlbumsAction } from "../../store/actions/AlbumsActionCreator";
 
 const DetailedAlbumContainer = styled.div`
   display: flex;
@@ -49,6 +52,7 @@ const DetailedAlbumContainer = styled.div`
 `;
 
 const DetailedAlbum = ({ albumInfo }) => {
+  const { myCollectionDispatch } = useContext(AlbumContext);
   return (
     <>
       {albumInfo.image !== undefined && (
@@ -64,11 +68,13 @@ const DetailedAlbum = ({ albumInfo }) => {
           </h6>
           <h6 className="detailed_album--tracklist">Tracklist</h6>
           <p>{albumInfo.wiki.summary}</p>
-          <Button type="modifyInfo" text="Modify information" />
-          <div className="pagination_buttons">
-            <Button type="pagination" text="Previous Page" />
-            <Button type="pagination" text="Next Page" />
-          </div>
+          <Button
+            action={() => {
+              myCollectionDispatch(addAlbumsAction(albumInfo));
+            }}
+            type="modifyInfo"
+            text="Add to My Collection"
+          />
         </DetailedAlbumContainer>
       )}
     </>
