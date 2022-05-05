@@ -50,7 +50,6 @@ const DetailedAlbumContainer = styled.div`
     width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   h6.detailed_album--tracklist {
     font-size: 20px;
