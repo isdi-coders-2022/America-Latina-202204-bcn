@@ -11,7 +11,7 @@ const HomePage = () => {
 };
 
 describe("Given a HomePage Component", () => {
-  describe("Whne it receives a text content `esta es la pagina de detalle`", () => {
+  describe("When it receives a text content `esta es la pagina de detalle`", () => {
     test("Then it showl show a text `esta es la pagina de detalle`", () => {
       const textResult = "esta es la pagina del home";
       render(<HomePage />);
