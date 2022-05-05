@@ -83,7 +83,7 @@ const DetailedAlbum = ({ albumInfo }) => {
             <span>Genre: {albumInfo.tags.tag[2].name}</span>
             <span>Release Date: {albumInfo.wiki.published}</span>
           </h6>
-          <h6 className="detailed_album--tracklist">Tracklist</h6>
+          <h6 className="detailed_album--tracklist">Summary</h6>
           <p>
             {albumInfo.wiki.summary.slice(
               0,
@@ -97,7 +97,7 @@ const DetailedAlbum = ({ albumInfo }) => {
               myCollectionDispatch(addAlbumsAction(albumInfo));
             }}
             type="modifyInfo"
-            text="Add to My Collection"
+            text="Add to My Playlist"
           />
         </DetailedAlbumContainer>
       )}

@@ -31,7 +31,6 @@ const HomePage = () => {
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[3].album} />}
       </Link>
-
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[4].album} />}
       </Link>
