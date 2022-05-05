@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import Album from "../../component/Album/Album";
+import { Link } from "react-router-dom";
 
 const Title = styled.h2`
   text-align: center;
@@ -17,7 +18,11 @@ const MyPlaylistPage = () => {
       <Title>My Playlist</Title>
       <MainInformation />
       {myCollection.length > 0 &&
-        myCollection.map((album) => <Album albumInfo={album} />)}
+        myCollection.map((album, index) => (
+          <Link key={index} to="/detail-page">
+            <Album key={index} albumInfo={album} />
+          </Link>
+        ))}
     </>
   );
 };
