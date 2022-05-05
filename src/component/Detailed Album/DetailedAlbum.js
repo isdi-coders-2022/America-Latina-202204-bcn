@@ -36,6 +36,11 @@ const DetailedAlbumContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+    span {
+      &.detailed_album--title__album {
+        color: rgb(196, 196, 196);
+      }
+    }
   }
 
   .pagination_buttons {
@@ -74,7 +79,9 @@ const DetailedAlbum = ({ albumInfo }) => {
         <DetailedAlbumContainer>
           <h5 className="detailed_album--title">
             <span>{albumInfo.artist}</span>
-            <span>{albumInfo.name}</span>
+            <span className="detailed_album--title__album">
+              {albumInfo.name}
+            </span>
           </h5>
 
           <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
