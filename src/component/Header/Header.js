@@ -1,6 +1,10 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
+const style = {
+  width: `100%`,
+};
+
 const Navigation = styled.nav`
   background: #fd6262;
   display: flex;
@@ -41,7 +45,7 @@ const Navigation = styled.nav`
 
 const Header = () => {
   return (
-    <Navigation className="main-navigation">
+    <Navigation style={style} className="main-navigation">
       <ul>
         <li>
           <Link to="/complete-Collection">COMPLETE COLLECTION</Link>

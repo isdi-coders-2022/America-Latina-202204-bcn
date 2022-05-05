@@ -12,7 +12,7 @@ const DetailedAlbumContainer = styled.div`
   height: auto;
 
   img {
-    width: 100%;
+    width: 300px;
   }
   h6.detailed_album--info {
     display: flex;
@@ -24,7 +24,6 @@ const DetailedAlbumContainer = styled.div`
 
   .detailed_album--title span {
     padding-bottom: 10px;
-    padding-top: 10px;
   }
 
   h5 {
@@ -33,8 +32,6 @@ const DetailedAlbumContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
   }
 
   .pagination_buttons {
@@ -44,10 +41,17 @@ const DetailedAlbumContainer = styled.div`
     margin-bottom: 20px;
   }
   p {
+    border: 2px solid;
     font-size: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   h6.detailed_album--tracklist {
     font-size: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 `;
 
