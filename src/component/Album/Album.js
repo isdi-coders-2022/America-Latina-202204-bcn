@@ -16,6 +16,9 @@ const AlbumContainer = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
+  i {
+    display: none;
+  }
   img {
     width: 200px;
     border: 1px solid;
@@ -46,7 +49,7 @@ const Album = ({ albumInfo }) => {
         }}
       />
       <i
-        class="fa-solid fa-heart-circle-plus"
+        className="fa-solid fa-heart-circle-plus"
         onClick={() => {
           myCollectionDispatch(
             deleteAlbumsAction(`${albumInfo.artist}-${albumInfo.name}`)

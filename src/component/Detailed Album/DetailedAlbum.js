@@ -11,6 +11,7 @@ const DetailedAlbumContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: auto;
+  padding-bottom: 15px;
 
   img {
     width: 300px;
@@ -21,6 +22,8 @@ const DetailedAlbumContainer = styled.div`
     margin: 10px;
     width: 100%;
     font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .detailed_album--title span {
@@ -51,8 +54,16 @@ const DetailedAlbumContainer = styled.div`
   }
   h6.detailed_album--tracklist {
     font-size: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+  }
+  .cpShLv {
+    margin-bottom: 15px;
+    background-color: powderblue;
+    transition: background-color 0.5s;
+  }
+  .cpShLv:hover {
+    background-color: grey;
   }
 `;
 
@@ -66,6 +77,7 @@ const DetailedAlbum = ({ albumInfo }) => {
             <span>{albumInfo.artist}</span>
             <span>{albumInfo.name}</span>
           </h5>
+
           <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
           <h6 className="detailed_album--info">
             <span>Genre: {albumInfo.tags.tag[2].name}</span>
@@ -74,6 +86,7 @@ const DetailedAlbum = ({ albumInfo }) => {
           <h6 className="detailed_album--tracklist">Tracklist</h6>
           <p>{albumInfo.wiki.summary}</p>
           <Button
+            className="Button__modify"
             action={() => {
               myCollectionDispatch(addAlbumsAction(albumInfo));
             }}
