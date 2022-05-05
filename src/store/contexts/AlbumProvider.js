@@ -6,6 +6,7 @@ import { loadAlbumsAction } from "../actions/AlbumsActionCreator";
 const AlbumProvider = ({ children }) => {
   const [albums, dispatch] = useReducer(albumReducer, []);
   const [detail, detailDispatch] = useReducer(albumReducer, [1]);
+  const [myCollection, myCollectionDispatch] = useReducer(albumReducer, []);
   useEffect(() => {
     const apiKey = `0ceed9a664f141e91291c54a6c867b86`;
     const getAlbumData = async (tag) => {
@@ -30,7 +31,14 @@ const AlbumProvider = ({ children }) => {
   }, []);
   return (
     <AlbumsContext.Provider
-      value={{ albums, dispatch, detail, detailDispatch }}
+      value={{
+        albums,
+        dispatch,
+        detail,
+        detailDispatch,
+        myCollection,
+        myCollectionDispatch,
+      }}
     >
       {children}
     </AlbumsContext.Provider>
