@@ -4,11 +4,13 @@ import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import styled from "styled-components";
 
+
 const Title = styled.h2`
   text-align: center;
   display: flex;
   justify-content: center;
 `;
+
 const HomePage = () => {
   const { albums } = useContext(AlbumContext);
   return (
