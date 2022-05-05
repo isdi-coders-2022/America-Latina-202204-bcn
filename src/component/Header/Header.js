@@ -32,7 +32,7 @@ const Navigation = styled.nav`
 
   a {
     text-decoration: none;
-    color: black;
+    color: white;
     text-align: center;
     padding-right: 2.5px;
   }

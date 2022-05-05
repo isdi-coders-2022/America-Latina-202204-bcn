@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   font-family: "Open Sans", sans-serif;
+  color: white;
   background-color: #fd6262;
   display: flex;
   bottom: 0;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 const Image = styled.img`
   @media (max-width: 600px) {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 0;
   }
   @media (min-width: 601px) {
     display: none;
