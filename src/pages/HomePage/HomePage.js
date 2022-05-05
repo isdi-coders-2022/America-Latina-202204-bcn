@@ -14,11 +14,10 @@ const Title = styled.h2`
 
 const HomePage = () => {
   const { albums } = useContext(AlbumContext);
-  const { detail, detailDispatch } = useContext(AlbumContext);
+  const { detailDispatch } = useContext(AlbumContext);
   useEffect(() => {
     detailDispatch(loadAlbumsAction(["logró cambiar"]));
   }, [detailDispatch]);
-  //;
   return (
     <>
       <MainInformation />
