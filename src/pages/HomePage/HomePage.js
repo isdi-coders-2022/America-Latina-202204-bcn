@@ -4,15 +4,16 @@ import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import styled from "styled-components";
 
+const ImageRedirect = styled.a`
+  text-decoration: none;
+`;
+const Title = styled.h2`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+`;
+
 const HomePage = () => {
-  const ImageRedirect = styled.a`
-    text-decoration: none;
-  `;
-  const Title = styled.h2`
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  `;
   const { albums } = useContext(AlbumContext);
   return (
     <>
