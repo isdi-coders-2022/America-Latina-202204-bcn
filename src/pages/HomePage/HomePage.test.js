@@ -13,7 +13,6 @@ describe("Given a HomePage Component", () => {
       );
 
       const searchResult = screen.getByText(textResult);
-
       expect(searchResult).toBeInTheDocument();
     });
   });
