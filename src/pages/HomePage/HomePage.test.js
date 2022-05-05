@@ -1,21 +1,19 @@
 import { render, screen } from "@testing-library/react";
-import MainInformation from "../../component/MainInformation/MainInformation";
-
-const HomePage = () => {
-  return (
-    <>
-      esta es la pagina del home
-      <MainInformation />
-    </>
-  );
-};
+import AlbumProvider from "../../store/contexts/AlbumProvider";
+import HomePage from "./HomePage";
 
 describe("Given a HomePage Component", () => {
-  describe("When it receives a text content `esta es la pagina de detalle`", () => {
-    test("Then it showl show a text `esta es la pagina de detalle`", () => {
-      const textResult = "esta es la pagina del home";
-      render(<HomePage />);
+  describe("When it receives a text content `Thes Best Albums`", () => {
+    test("Then it showl show a text `Thes Best Albums`", () => {
+      const textResult = "The Best Albums";
+      render(
+        <AlbumProvider>
+          <HomePage />
+        </AlbumProvider>
+      );
+
       const searchResult = screen.getByText(textResult);
+
       expect(searchResult).toBeInTheDocument();
     });
   });
