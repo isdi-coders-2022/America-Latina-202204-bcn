@@ -6,8 +6,7 @@ const DetailPage = () => {
 
   return (
     <>
-      <h2> esta es la pagina de detalle </h2>
-      <p>{detail[0]}</p>
+      <h2> Detail Page </h2>
     </>
   );
 };

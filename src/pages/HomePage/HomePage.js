@@ -21,17 +21,20 @@ const HomePage = () => {
   //;
   return (
     <>
-      esta es la pagina del home
       <MainInformation />
-      <Title>Thes Best Albums</Title>
+      <Title>The Best Albums</Title>
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[0].album} />}
       </Link>
-      {albums.length > 0 && <Album albumInfo={albums[1].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[2].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[3].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[4].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[5].album} />}
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[1].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[2].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[3].album} />}
+      </Link>
     </>
   );
 };
