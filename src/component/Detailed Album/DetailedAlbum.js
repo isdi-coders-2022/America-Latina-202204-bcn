@@ -5,6 +5,7 @@ import AlbumContext from "../../store/contexts/AlbumContext";
 import { addAlbumsAction } from "../../store/actions/AlbumsActionCreator";
 
 const DetailedAlbumContainer = styled.div`
+  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;

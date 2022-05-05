@@ -6,6 +6,7 @@ const style = {
 };
 
 const Navigation = styled.nav`
+  font-family: "Open Sans", sans-serif;
   background: #fd6262;
   display: flex;
   flex-direction: column;

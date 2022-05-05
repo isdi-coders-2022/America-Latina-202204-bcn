@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
+  font-family: "Open Sans", sans-serif;
   background-color: #fd6262;
   display: flex;
-  border: 0px solid;
   bottom: 0;
   justify-content: center;
   margin: 0px;

@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CompleteCollection from "./pages/CompleteCollectionPage/CompleteCollection";
 import MyPlaylistPage from "./pages/MyPlaylist/MyPlaylistPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
-
+import "@fontsource/open-sans";
 function App() {
   return (
     <>

@@ -27,7 +27,7 @@ const AlbumProvider = ({ children }) => {
       );
       dispatch(loadAlbumsAction(albumList));
     };
-    getAlbumData("rap");
+    getAlbumData("rock");
   }, []);
   return (
     <AlbumsContext.Provider
