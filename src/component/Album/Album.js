@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { useContext } from "react";
+import AlbumContext from "../../store/contexts/AlbumContext";
+import { updateLocalAlbumAction } from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
   padding-bottom: 15px;
@@ -26,9 +29,17 @@ const AlbumContainer = styled.div`
 `;
 
 const Album = ({ albumInfo }) => {
+  const { detailDispatch } = useContext(AlbumContext);
+
   return (
     <AlbumContainer>
-      <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
+      <img
+        src={albumInfo.image[2]["#text"]}
+        alt={albumInfo.name}
+        onClick={() => {
+          detailDispatch(updateLocalAlbumAction(albumInfo));
+        }}
+      />
       <h5>{albumInfo.artist}</h5>
       <h5>{albumInfo.name}</h5>
     </AlbumContainer>

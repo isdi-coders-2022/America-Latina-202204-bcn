@@ -3,7 +3,7 @@ import Album from "../../component/Album/Album";
 import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 
 const Title = styled.h2`
   text-align: center;
@@ -13,16 +13,27 @@ const Title = styled.h2`
 
 const HomePage = () => {
   const { albums } = useContext(AlbumContext);
+
   return (
     <>
       <MainInformation />
       <Title>The Best Albums</Title>
-      {albums.length > 0 && <Album albumInfo={albums[0].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[1].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[2].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[3].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[4].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[5].album} />}
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[0].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[1].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[2].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[3].album} />}
+      </Link>
+
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[4].album} />}
+      </Link>
     </>
   );
 };

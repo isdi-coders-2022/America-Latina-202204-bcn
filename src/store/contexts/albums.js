@@ -1,4 +1,4 @@
-const albums = [
+const initialAlbums = [
   {
     album: {
       artist: "Linkin Park",
@@ -281,4 +281,4 @@ const albums = [
   },
 ];
 
-export default albums;
+export default initialAlbums;

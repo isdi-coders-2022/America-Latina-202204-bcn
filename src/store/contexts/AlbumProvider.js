@@ -5,6 +5,7 @@ import { loadAlbumsAction } from "../actions/AlbumsActionCreator";
 
 const AlbumProvider = ({ children }) => {
   const [albums, dispatch] = useReducer(albumReducer, []);
+  const [detail, detailDispatch] = useReducer(albumReducer, [1]);
   useEffect(() => {
     const apiKey = `0ceed9a664f141e91291c54a6c867b86`;
     const getAlbumData = async (tag) => {
@@ -28,7 +29,9 @@ const AlbumProvider = ({ children }) => {
     getAlbumData("rap");
   }, []);
   return (
-    <AlbumsContext.Provider value={{ albums, dispatch }}>
+    <AlbumsContext.Provider
+      value={{ albums, dispatch, detail, detailDispatch }}
+    >
       {children}
     </AlbumsContext.Provider>
   );
