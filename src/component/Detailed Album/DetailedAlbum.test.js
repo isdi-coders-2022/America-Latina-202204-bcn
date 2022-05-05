@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
 import Button from "../Button/Button";
 import DetailedAlbum from "./DetailedAlbum";
+import AlbumContext from "../../store/contexts/AlbumContext";
 
 describe("Given a DetailedAlbum Component", () => {
   describe("When it's rendered", () => {
@@ -288,9 +289,9 @@ describe("Given a DetailedAlbum Component", () => {
         },
       };
       render(
-        <AlbumProvider>
+        <AlbumContext>
           <DetailedAlbum albumInfo={album.album} />
-        </AlbumProvider>
+        </AlbumContext>
       );
       const searchedHeaders = screen.getAllByRole("heading");
       const searchedImage = screen.getAllByRole("img");
@@ -307,9 +308,9 @@ describe("Given a DetailedAlbum Component", () => {
       const onClickAction = jest.fn();
 
       render(
-        <AlbumProvider>
+        <AlbumContext.Provider>
           <Button type="modifyInfo" action={onClickAction} />
-        </AlbumProvider>
+        </AlbumContext.Provider>
       );
       const button = screen.getByRole("button");
 
