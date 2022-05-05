@@ -4,6 +4,7 @@ import {
   deleteAlbumsAction,
   modifyAlbumsAction,
   loadAlbumsAction,
+  updateLocalAlbumAction,
 } from "../actions/AlbumsActionCreator";
 import albumReducer from "./albumReducer";
 
@@ -57,6 +58,21 @@ describe("Given the loadAlbumFunction passed on to the reducer", () => {
       const newArray = albumReducer(originalArray, usedAction);
 
       const expectedArray = inputtedArray;
+      expect(newArray).toEqual(expectedArray);
+    });
+  });
+});
+
+describe("Given the updateAlbumFunction passed on to the reducer", () => {
+  describe("When the album {artist: Bob Dylan} is passed on to the reducer", () => {
+    test("Then it will return the array [{artist: Bob Dylan}]", () => {
+      const inputtedObject = { artist: "Bob Dylan" };
+      const originalArray = [4, 5, 6];
+
+      const usedAction = updateLocalAlbumAction(inputtedObject);
+      const newArray = albumReducer(originalArray, usedAction);
+
+      const expectedArray = [inputtedObject];
       expect(newArray).toEqual(expectedArray);
     });
   });

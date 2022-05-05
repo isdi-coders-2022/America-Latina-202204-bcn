@@ -40,8 +40,20 @@ const Album = ({ albumInfo }) => {
           detailDispatch(updateLocalAlbumAction(albumInfo));
         }}
       />
-      <h5>{albumInfo.artist}</h5>
-      <h5>{albumInfo.name}</h5>
+      <h5
+        onClick={() => {
+          detailDispatch(updateLocalAlbumAction(albumInfo));
+        }}
+      >
+        {albumInfo.artist}
+      </h5>
+      <h5
+        onClick={() => {
+          detailDispatch(updateLocalAlbumAction(albumInfo));
+        }}
+      >
+        {albumInfo.name}
+      </h5>
     </AlbumContainer>
   );
 };

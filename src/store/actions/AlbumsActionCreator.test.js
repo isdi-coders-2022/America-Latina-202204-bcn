@@ -3,6 +3,7 @@ import {
   modifyAlbumsAction,
   addAlbumsAction,
   deleteAlbumsAction,
+  updateLocalAlbumAction,
 } from "./AlbumsActionCreator";
 
 describe("Given the loadAlbumsAction", () => {
@@ -66,6 +67,22 @@ describe("Given the deleteAlbumsAction", () => {
       };
 
       expect(deletedAction).toEqual(expectedObject);
+    });
+  });
+});
+
+describe("Given the updateLocalAlbumAction", () => {
+  describe("When called upon, with the newAlbum parameter {title: test-album}", () => {
+    test("Then an object with the property type: 'update-local-album' will be created, with a property newAlbum {title: test-album}", () => {
+      const newAlbum = { title: "test-album" };
+      const updateAction = updateLocalAlbumAction(newAlbum);
+
+      const expectedObject = {
+        type: "update-local-album",
+        newAlbum: newAlbum,
+      };
+
+      expect(updateAction).toEqual(expectedObject);
     });
   });
 });
