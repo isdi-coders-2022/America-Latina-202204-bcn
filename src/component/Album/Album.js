@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import MainInformation from "../../component/MainInformation/MainInformation";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
-import {
-  loadAlbumsAction,
-  updateLocalAlbumAction,
-} from "../../store/actions/AlbumsActionCreator";
+import { updateLocalAlbumAction } from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
   padding-bottom: 15px;

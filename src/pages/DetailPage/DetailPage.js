@@ -7,7 +7,7 @@ const DetailPage = () => {
 
   return (
     <>
-      <h2> esta es la pagina de detalle </h2>
+      <h2> Detail Page </h2>
       <DetailedAlbum albumInfo={detail[0]} />
     </>
   );

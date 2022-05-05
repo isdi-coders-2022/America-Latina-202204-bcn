@@ -3,7 +3,7 @@ import MainInformation from "../../component/MainInformation/MainInformation";
 const MyPlaylistPage = () => {
   return (
     <>
-      esta es la pagina de mis playlist
+      <h2>My Playlist</h2>
       <MainInformation />
     </>
   );

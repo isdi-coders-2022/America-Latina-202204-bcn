@@ -3,7 +3,7 @@ import MainInformation from "../../component/MainInformation/MainInformation";
 const CompleteCollection = () => {
   return (
     <>
-      esta es la pagina de collection complete
+      <h1>Complete Collection</h1>
       <MainInformation />
     </>
   );

@@ -51,24 +51,26 @@ const DetailedAlbumContainer = styled.div`
 const DetailedAlbum = ({ albumInfo }) => {
   return (
     <>
-      <DetailedAlbumContainer>
-        <h5 className="detailed_album--title">
-          <span>{albumInfo.artist}</span>
-          <span>{albumInfo.name}</span>
-        </h5>
-        <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
-        <h6 className="detailed_album--info">
-          <span>Genre: {albumInfo.tags.tag[2].name}</span>
-          <span>Release Date: {albumInfo.wiki.published}</span>
-        </h6>
-        <h6 className="detailed_album--tracklist">Tracklist</h6>
-        <p>{albumInfo.wiki.summary}</p>
-        <Button type="modifyInfo" text="Modify information" />
-        <div className="pagination_buttons">
-          <Button type="pagination" text="Previous Page" />
-          <Button type="pagination" text="Next Page" />
-        </div>
-      </DetailedAlbumContainer>
+      {albumInfo.image !== undefined && (
+        <DetailedAlbumContainer>
+          <h5 className="detailed_album--title">
+            <span>{albumInfo.artist}</span>
+            <span>{albumInfo.name}</span>
+          </h5>
+          <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
+          <h6 className="detailed_album--info">
+            <span>Genre: {albumInfo.tags.tag[2].name}</span>
+            <span>Release Date: {albumInfo.wiki.published}</span>
+          </h6>
+          <h6 className="detailed_album--tracklist">Tracklist</h6>
+          <p>{albumInfo.wiki.summary}</p>
+          <Button type="modifyInfo" text="Modify information" />
+          <div className="pagination_buttons">
+            <Button type="pagination" text="Previous Page" />
+            <Button type="pagination" text="Next Page" />
+          </div>
+        </DetailedAlbumContainer>
+      )}
     </>
   );
 };
