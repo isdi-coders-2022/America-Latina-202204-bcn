@@ -15,7 +15,6 @@ const CompleteCollection = () => {
   return (
     <>
       <H1>Complete Collection</H1>
-
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[0].album} />}
       </Link>
