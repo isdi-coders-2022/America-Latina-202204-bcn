@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
-import { loadAlbumsAction } from "../../store/actions/AlbumsActionCreator";
+import { updateLocalAlbumAction } from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
   padding-bottom: 15px;
@@ -37,7 +37,7 @@ const Album = ({ albumInfo }) => {
         src={albumInfo.image[2]["#text"]}
         alt={albumInfo.name}
         onClick={() => {
-          detailDispatch(loadAlbumsAction(["Test de click"]));
+          detailDispatch(updateLocalAlbumAction(albumInfo));
         }}
       />
       <h5>{albumInfo.artist}</h5>

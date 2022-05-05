@@ -3,6 +3,7 @@ import {
   addAlbumsType,
   modifyAlbumsType,
   deleteAlbumsType,
+  updateLocalAlbumType,
 } from "./AlbumsActionTypes";
 
 export const loadAlbumsAction = (loadedAlbums) => ({
@@ -24,4 +25,9 @@ export const modifyAlbumsAction = (albumIdToModify, newProperties) => ({
 export const deleteAlbumsAction = (albumIdToDelete) => ({
   type: deleteAlbumsType,
   albumIdToDelete,
+});
+
+export const updateLocalAlbumAction = (newAlbum) => ({
+  type: updateLocalAlbumType,
+  newAlbum,
 });
