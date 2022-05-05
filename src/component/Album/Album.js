@@ -4,6 +4,7 @@ import AlbumContext from "../../store/contexts/AlbumContext";
 import { updateLocalAlbumAction } from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
+  font-family: "Open Sans", sans-serif;
   padding-bottom: 15px;
   padding-left: 0px;
   padding-right: 0px;
@@ -18,7 +19,8 @@ const AlbumContainer = styled.div`
   }
   h5 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
     font-size: 20px;
     margin: 0;
     padding: 7px 0 0 0;

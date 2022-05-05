@@ -5,6 +5,7 @@ import App from "./App";
 import AlbumProvider from "./store/contexts/AlbumProvider";
 import reportWebVitals from "./reportWebVitals";
 import styled from "styled-components";
+import "@fontsource/open-sans";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const Container = styled.div`
   width: 95vw;

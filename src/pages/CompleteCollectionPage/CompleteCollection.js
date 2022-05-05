@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import Album from "../../component/Album/Album";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
+
 const H1 = styled.h1`
   display: flex;
   justify-content: center;
+  font-family: "Open Sans", sans-serif;
 `;
 
 const CompleteCollection = () => {

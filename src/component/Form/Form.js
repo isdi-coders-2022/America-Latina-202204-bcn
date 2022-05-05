@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledForm = styled.div`
+  font-family: "Open Sans", sans-serif;
   align-items: center;
   width: 100vw;
   margin: 50px auto;

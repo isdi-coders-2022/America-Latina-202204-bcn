@@ -6,6 +6,7 @@ import Album from "../../component/Album/Album";
 import { Link } from "react-router-dom";
 
 const Title = styled.h2`
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   display: flex;
   justify-content: center;

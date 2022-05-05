@@ -4,6 +4,7 @@ import DetailedAlbum from "../../component/Detailed Album/DetailedAlbum";
 import styled from "styled-components";
 
 const Title = styled.h1`
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   display: flex;
   justify-content: center;
