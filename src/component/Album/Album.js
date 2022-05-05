@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import MainInformation from "../../component/MainInformation/MainInformation";
+import { useContext, useEffect } from "react";
+import AlbumContext from "../../store/contexts/AlbumContext";
+import { loadAlbumsAction } from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
   padding-bottom: 15px;
@@ -26,9 +30,17 @@ const AlbumContainer = styled.div`
 `;
 
 const Album = ({ albumInfo }) => {
+  const { detailDispatch } = useContext(AlbumContext);
+
   return (
     <AlbumContainer>
-      <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
+      <img
+        src={albumInfo.image[2]["#text"]}
+        alt={albumInfo.name}
+        onClick={() => {
+          detailDispatch(loadAlbumsAction(["Test de click"]));
+        }}
+      />
       <h5>{albumInfo.artist}</h5>
       <h5>{albumInfo.name}</h5>
     </AlbumContainer>
