@@ -5,6 +5,7 @@ import App from "./App";
 import AlbumProvider from "./store/contexts/AlbumProvider";
 import reportWebVitals from "./reportWebVitals";
 import "@fontsource/open-sans";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
