@@ -5,31 +5,27 @@ const Navigation = styled.nav`
   font-family: "Open Sans", sans-serif;
   background: #fd6262;
   position: sticky;
-  height: 60px;
   top: 0;
-  right: 0px;
-  left: 0px;
-  width: 100%;
-
+  display: flex;
   ul {
     display: flex;
-
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    text-align: center;
   }
   li {
-    flex-direction: row;
     text-align: center;
-    justify-content: space-between;
-    height: 55px;
+    justify-content: space-around;
+    margin-right: 15px;
     padding: 2px;
     display: flex;
-    align-items: center;
+    &:nth-child(0n + 2) {
+      padding-right: 15px;
+    }
   }
-
   a {
     text-decoration: none;
     color: white;
