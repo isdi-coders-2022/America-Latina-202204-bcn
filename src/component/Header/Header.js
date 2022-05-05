@@ -1,29 +1,24 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
-const style = {
-  width: `100%`,
-};
-
 const Navigation = styled.nav`
   font-family: "Open Sans", sans-serif;
   background: #fd6262;
-  display: flex;
-  flex-direction: column;
   position: sticky;
-  display: flex;
   height: 60px;
   top: 0;
   right: 0px;
   left: 0px;
-  text-align: center;
+  width: 100%;
 
   ul {
     display: flex;
+
     list-style: none;
     justify-content: space-between;
     padding-left: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
   }
   li {
     flex-direction: row;
@@ -38,15 +33,14 @@ const Navigation = styled.nav`
   a {
     text-decoration: none;
     color: black;
-    padding: 10px;
-    padding-top: 10px;
     text-align: center;
+    padding-right: 2.5px;
   }
 `;
 
 const Header = () => {
   return (
-    <Navigation style={style} className="main-navigation">
+    <Navigation className="main-navigation">
       <ul>
         <li>
           <Link to="/complete-Collection">COMPLETE COLLECTION</Link>

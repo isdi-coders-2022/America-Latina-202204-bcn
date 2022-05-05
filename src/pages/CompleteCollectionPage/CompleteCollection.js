@@ -37,41 +37,11 @@ const CompleteCollection = () => {
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[6].album} />}
       </Link>
-
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[7].album} />}
       </Link>
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[8].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[9].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[10].album} />}
-      </Link>
-
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[11].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[12].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[13].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[14].album} />}
-      </Link>
-
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[15].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[16].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[17].album} />}
       </Link>
     </>
   );
