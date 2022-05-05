@@ -16,7 +16,7 @@ const Navigation = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-left: 0px;
     margin-top: 0px;
   }

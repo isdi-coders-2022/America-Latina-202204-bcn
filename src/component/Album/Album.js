@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 const AlbumContainer = styled.div`
-  padding: 15px;
+  padding-bottom: 15px;
   padding-left: 0px;
-  width: 40px;
+  padding-right: 0px;
+  width: 30px;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   img {
     width: 200px;
-    border: 2px solid;
+    border: 1px solid;
   }
   h5 {
     text-align: center;
