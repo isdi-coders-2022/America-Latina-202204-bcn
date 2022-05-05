@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
-import { updateLocalAlbumAction } from "../../store/actions/AlbumsActionCreator";
+import {
+  deleteAlbumsAction,
+  updateLocalAlbumAction,
+} from "../../store/actions/AlbumsActionCreator";
 
 const AlbumContainer = styled.div`
   font-family: "Open Sans", sans-serif;
@@ -31,7 +34,7 @@ const AlbumContainer = styled.div`
 `;
 
 const Album = ({ albumInfo }) => {
-  const { detailDispatch } = useContext(AlbumContext);
+  const { detailDispatch, myCollectionDispatch } = useContext(AlbumContext);
 
   return (
     <AlbumContainer>
@@ -42,6 +45,14 @@ const Album = ({ albumInfo }) => {
           detailDispatch(updateLocalAlbumAction(albumInfo));
         }}
       />
+      <i
+        class="fa-solid fa-heart-circle-plus"
+        onClick={() => {
+          myCollectionDispatch(
+            deleteAlbumsAction(`${albumInfo.artist}-${albumInfo.name}`)
+          );
+        }}
+      ></i>
       <h5
         onClick={() => {
           detailDispatch(updateLocalAlbumAction(albumInfo));

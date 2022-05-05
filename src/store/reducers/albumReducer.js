@@ -21,9 +21,7 @@ const albumReducer = (currentAlbums, action) => {
       break;
     case deleteAlbumsType:
       newAlbums = currentAlbums.filter((album) => {
-        return (
-          `${album.album.artist}-${album.album.name}` !== action.albumIdToDelete
-        );
+        return `${album.artist}-${album.name}` !== action.albumIdToDelete;
       });
       break;
     case modifyAlbumsType:
