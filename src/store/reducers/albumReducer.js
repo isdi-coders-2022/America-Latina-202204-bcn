@@ -3,12 +3,16 @@ import {
   deleteAlbumsType,
   modifyAlbumsType,
   loadAlbumsType,
+  updateLocalAlbumType,
 } from "../actions/AlbumsActionTypes";
 
 const albumReducer = (currentAlbums, action) => {
   let newAlbums;
 
   switch (action.type) {
+    case updateLocalAlbumType:
+      newAlbums = [action.newAlbum];
+      break;
     case loadAlbumsType:
       newAlbums = [...action.loadedAlbums];
       break;

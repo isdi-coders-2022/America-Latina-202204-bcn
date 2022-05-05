@@ -15,9 +15,6 @@ const Title = styled.h2`
 const HomePage = () => {
   const { albums } = useContext(AlbumContext);
   const { detail, detailDispatch } = useContext(AlbumContext);
-  useEffect(() => {
-    detailDispatch(loadAlbumsAction(["logró cambiar"]));
-  }, [detailDispatch]);
   //;
   return (
     <>
@@ -27,11 +24,18 @@ const HomePage = () => {
       <Link to="/detail-page">
         {albums.length > 0 && <Album albumInfo={albums[0].album} />}
       </Link>
-      {albums.length > 0 && <Album albumInfo={albums[1].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[2].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[3].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[4].album} />}
-      {albums.length > 0 && <Album albumInfo={albums[5].album} />}
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[1].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[2].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[3].album} />}
+      </Link>
+      <Link to="/detail-page">
+        {albums.length > 0 && <Album albumInfo={albums[4].album} />}
+      </Link>
     </>
   );
 };
