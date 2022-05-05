@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
+import Button from "../Button/Button";
 import DetailedAlbum from "./DetailedAlbum";
 
 describe("Given a DetailedAlbum Component", () => {
@@ -298,6 +300,22 @@ describe("Given a DetailedAlbum Component", () => {
 
       expect(searchedHeaders.length).toBe(expectedHeadings);
       expect(searchedImage.length).toBe(expectedImage);
+    });
+  });
+  describe("When the Button component is clicked", () => {
+    test("Then the props onClick is called", () => {
+      const onClickAction = jest.fn();
+
+      render(
+        <AlbumProvider>
+          <Button type="modifyInfo" action={onClickAction} />
+        </AlbumProvider>
+      );
+      const button = screen.getByRole("button");
+
+      userEvent.click(button);
+
+      expect(onClickAction).toHaveBeenCalled();
     });
   });
 });
