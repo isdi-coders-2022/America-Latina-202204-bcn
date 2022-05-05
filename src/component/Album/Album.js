@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import MainInformation from "../../component/MainInformation/MainInformation";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import { loadAlbumsAction } from "../../store/actions/AlbumsActionCreator";
 
