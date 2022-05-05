@@ -289,9 +289,9 @@ describe("Given a DetailedAlbum Component", () => {
         },
       };
       render(
-        <AlbumContext>
+        <AlbumProvider>
           <DetailedAlbum albumInfo={album.album} />
-        </AlbumContext>
+        </AlbumProvider>
       );
       const searchedHeaders = screen.getAllByRole("heading");
       const searchedImage = screen.getAllByRole("img");
