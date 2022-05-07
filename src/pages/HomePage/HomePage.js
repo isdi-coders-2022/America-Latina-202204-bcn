@@ -19,21 +19,12 @@ const HomePage = () => {
     <>
       <MainInformation />
       <Title>The Best Albums</Title>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[0].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[1].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[2].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[3].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[4].album} />}
-      </Link>
+      {albums.length > 0 &&
+        albums.slice(0, 4).map((album, index) => (
+          <Link key={index} to="/detail-page">
+            <Album albumInfo={album.album} />
+          </Link>
+        ))}
     </>
   );
 };
