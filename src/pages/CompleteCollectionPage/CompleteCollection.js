@@ -15,33 +15,12 @@ const CompleteCollection = () => {
   return (
     <>
       <H1>Complete Collection</H1>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[0].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[1].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[2].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[3].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[4].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[5].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[6].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[7].album} />}
-      </Link>
-      <Link to="/detail-page">
-        {albums.length > 0 && <Album albumInfo={albums[8].album} />}
-      </Link>
+      {albums.length > 0 &&
+        albums.slice(0, 8).map((album, index) => (
+          <Link key={index} to="/detail-page">
+            <Album albumInfo={album.album} />
+          </Link>
+        ))}
     </>
   );
 };
