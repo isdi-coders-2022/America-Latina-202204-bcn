@@ -4,6 +4,11 @@ import Album from "../../component/Album/Album";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import UiContext from "../../store/contexts/UiContext";
+import Button from "../../component/Button/Button";
+import {
+  nextPageAction,
+  previousPageAction,
+} from "../../store/actions/UiActionCreator";
 
 const H1 = styled.h1`
   display: flex;
@@ -13,7 +18,7 @@ const H1 = styled.h1`
 
 const CompleteCollection = () => {
   const { albums } = useContext(AlbumContext);
-  const { ui } = useContext(UiContext);
+  const { ui, uiDispatch } = useContext(UiContext);
   return (
     <>
       <H1>Complete Collection</H1>
@@ -28,6 +33,22 @@ const CompleteCollection = () => {
               <Album albumInfo={album.album} />
             </Link>
           ))}
+      {ui.currentPage >= 1 && (
+        <Button
+          type="pagination"
+          text="Previous Page"
+          action={() => {
+            uiDispatch(previousPageAction(albums));
+          }}
+        />
+      )}
+      <Button
+        type="pagination"
+        text="Next Page"
+        action={() => {
+          uiDispatch(nextPageAction(albums));
+        }}
+      />
     </>
   );
 };
