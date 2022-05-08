@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Album from "./Album";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
+import UiProvider from "../../store/contexts/UiProvider";
 
 describe("Given the Album component", () => {
   describe("When it is is rendered with the object corresponding to Minutes to Midnight", () => {
@@ -43,7 +44,9 @@ describe("Given the Album component", () => {
     test("Then an image and two headers will be shown", () => {
       render(
         <AlbumProvider>
-          <Album albumInfo={album} />
+          <UiProvider>
+            <Album albumInfo={album} />
+          </UiProvider>
         </AlbumProvider>
       );
       const searchedHeaders = screen.getAllByRole("heading");

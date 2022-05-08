@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
+import UiProvider from "../../store/contexts/uiProvider";
 import DetailPage from "./DetailPage";
 
 describe("Given a DetailPage Component", () => {
@@ -8,7 +9,9 @@ describe("Given a DetailPage Component", () => {
       const textResult = "Detail Page";
       render(
         <AlbumProvider>
-          <DetailPage />
+          <UiProvider>
+            <DetailPage />
+          </UiProvider>
         </AlbumProvider>
       );
       const searchResult = screen.getByText(textResult);

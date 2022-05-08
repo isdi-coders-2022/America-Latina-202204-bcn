@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import MyPlaylistPage from "./MyPlaylistPage";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
+import UiProvider from "../../store/contexts/UiProvider";
 
 describe("Given a DetailPage Component", () => {
   describe("Whne it receives a text content `My Playlist`", () => {
@@ -9,7 +10,9 @@ describe("Given a DetailPage Component", () => {
 
       render(
         <AlbumProvider>
-          <MyPlaylistPage />
+          <UiProvider>
+            <MyPlaylistPage />
+          </UiProvider>
         </AlbumProvider>
       );
 
