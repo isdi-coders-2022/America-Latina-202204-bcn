@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given a Button component When it receives a type pagination text containing 'Next Page' Then it should render the text in a button 1`] = `
+exports[`Given a Button component When it receives a type pagination text containing 'Next Page' Then it should render the text 'Next Page' in a button 1`] = `
 <button
   className="sc-bczRLJ jgMWzy"
 >
