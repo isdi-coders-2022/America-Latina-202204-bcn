@@ -4,7 +4,7 @@ import Header from "./Header";
 
 describe("Given a Header component", () => {
   describe("When it receives a listiten", () => {
-    test("Then it should show listitens is the same to 3", () => {
+    test("Then it should show listitens is the same to 6", () => {
       const expectedListitens = 6;
 
       render(

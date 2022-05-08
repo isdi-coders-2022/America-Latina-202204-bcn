@@ -55,21 +55,11 @@ const Album = ({ albumInfo }) => {
             deleteAlbumsAction(`${albumInfo.artist}-${albumInfo.name}`)
           );
         }}
-      ></i>
-      <h5
-        onClick={() => {
-          detailDispatch(updateLocalAlbumAction(albumInfo));
-        }}
       >
-        {albumInfo.artist}
-      </h5>
-      <h5
-        onClick={() => {
-          detailDispatch(updateLocalAlbumAction(albumInfo));
-        }}
-      >
-        {albumInfo.name}
-      </h5>
+        DELETE
+      </i>
+      <h5>{albumInfo.artist}</h5>
+      <h5>{albumInfo.name}</h5>
     </AlbumContainer>
   );
 };

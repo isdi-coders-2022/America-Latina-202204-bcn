@@ -5,6 +5,10 @@ import Paginator from "../../component/Paginator/Paginator";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import UiContext from "../../store/contexts/UiContext";
+import {
+  previousPageAction,
+  nextPageAction,
+} from "../../store/actions/UiActionCreator";
 
 const H1 = styled.h1`
   display: flex;
@@ -14,7 +18,14 @@ const H1 = styled.h1`
 
 const CompleteCollection = () => {
   const { albums } = useContext(AlbumContext);
-  const { ui } = useContext(UiContext);
+  const { ui, uiDispatch } = useContext(UiContext);
+  const previousPage = () => {
+    uiDispatch(previousPageAction());
+  };
+  const nextPage = () => {
+    uiDispatch(nextPageAction());
+  };
+
   return (
     <>
       <H1>Complete Collection</H1>
@@ -29,7 +40,10 @@ const CompleteCollection = () => {
               <Album albumInfo={album.album} />
             </Link>
           ))}
-      <Paginator />
+      <Paginator
+        firstAction={() => previousPage()}
+        secondAction={() => nextPage()}
+      />
     </>
   );
 };

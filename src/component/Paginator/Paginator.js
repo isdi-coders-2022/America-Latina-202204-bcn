@@ -13,27 +13,15 @@ const PaginatorContainer = styled.div`
   margin-bottom: 15px;
 `;
 
-const Paginator = () => {
+const Paginator = ({ firstAction, secondAction }) => {
   const { uiDispatch } = useContext(UiContext);
   return (
     <>
       <PaginatorContainer>
-        <i
-          className="fa-solid fa-arrow-left"
-          onClick={() => {
-            uiDispatch(previousPageAction());
-            window.scrollTo(0, 0);
-          }}
-        >
+        <i className="fa-solid fa-arrow-left" onClick={firstAction}>
           Previous
         </i>
-        <i
-          className="fa-solid fa-arrow-right"
-          onClick={() => {
-            uiDispatch(nextPageAction());
-            window.scrollTo(0, 0);
-          }}
-        >
+        <i className="fa-solid fa-arrow-right" onClick={secondAction}>
           Next
         </i>
       </PaginatorContainer>

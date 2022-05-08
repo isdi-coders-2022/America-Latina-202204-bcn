@@ -1,5 +1,4 @@
 import albums from "../contexts/albums";
-import { initialObjectArray } from "../contexts/albums";
 import {
   addAlbumsAction,
   deleteAlbumsAction,
