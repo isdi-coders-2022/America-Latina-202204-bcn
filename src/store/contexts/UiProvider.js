@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import uiReducer from "../reducers/uiReducer";
-import UiContext from "./uiContext";
+import UiContext from "./UiContext";
 
 const initialUi = {
   currentPage: 0,
@@ -9,7 +9,7 @@ const initialUi = {
   lastPage: false,
 };
 
-export const UiProvider = ({ children }) => {
+const UiProvider = ({ children }) => {
   const [ui, uiDispatch] = useReducer(uiReducer, initialUi);
 
   return (
@@ -23,3 +23,5 @@ export const UiProvider = ({ children }) => {
     </UiContext.Provider>
   );
 };
+
+export default UiProvider;

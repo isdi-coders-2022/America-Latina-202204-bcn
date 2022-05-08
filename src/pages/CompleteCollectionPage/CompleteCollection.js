@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Album from "../../component/Album/Album";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
+import UiContext from "../../store/contexts/UiContext";
 
 const H1 = styled.h1`
   display: flex;
@@ -12,20 +13,15 @@ const H1 = styled.h1`
 
 const CompleteCollection = () => {
   const { albums } = useContext(AlbumContext);
-  const pageData = {
-    currentPage: 0,
-    albumsPerPage: 4,
-    firstPage: true,
-    lastPage: false,
-  };
+  const { ui } = useContext(UiContext);
   return (
     <>
       <H1>Complete Collection</H1>
       {albums.length > 0 &&
         albums
           .slice(
-            pageData.currentPage * pageData.albumsPerPage,
-            (pageData.currentPage + 1) * pageData.albumsPerPage
+            ui.currentPage * ui.albumsPerPage,
+            (ui.currentPage + 1) * ui.albumsPerPage
           )
           .map((album, index) => (
             <Link key={index} to="/detail-page">
