@@ -78,3 +78,17 @@ describe("Given the updateAlbumFunction passed on to the reducer", () => {
     });
   });
 });
+
+describe("Given the function {type: 'new-function'} and an initial array of [1,2,3] passed on to the reducer", () => {
+  describe("When it is instantiated", () => {
+    test("Then it will return the same array", () => {
+      const originalArray = [1, 2, 3];
+
+      const usedAction = { type: "new-function" };
+      const newArray = albumReducer(originalArray, usedAction);
+
+      const expectedArray = originalArray;
+      expect(newArray).toEqual(expectedArray);
+    });
+  });
+});

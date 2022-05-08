@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import { useContext } from "react";
 import UiContext from "../../store/contexts/UiContext";
@@ -7,14 +6,12 @@ import {
   previousPageAction,
 } from "../../store/actions/UiActionCreator";
 
-
 const PaginatorContainer = styled.div`
   display: flex;
   justify-content: space-around;
   font-size: 30px;
   margin-bottom: 15px;
 `;
-
 
 const Paginator = () => {
   const { uiDispatch } = useContext(UiContext);
@@ -27,14 +24,18 @@ const Paginator = () => {
             uiDispatch(previousPageAction());
             window.scrollTo(0, 0);
           }}
-        ></i>
+        >
+          Previous
+        </i>
         <i
           className="fa-solid fa-arrow-right"
           onClick={() => {
             uiDispatch(nextPageAction());
             window.scrollTo(0, 0);
           }}
-        ></i>
+        >
+          Next
+        </i>
       </PaginatorContainer>
     </>
   );
