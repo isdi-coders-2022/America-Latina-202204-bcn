@@ -308,9 +308,9 @@ describe("Given a DetailedAlbum Component", () => {
       const onClickAction = jest.fn();
 
       render(
-        <AlbumContext.Provider>
+        <AlbumProvider>
           <Button type="modifyInfo" action={onClickAction} />
-        </AlbumContext.Provider>
+        </AlbumProvider>
       );
       const button = screen.getByRole("button");
 
