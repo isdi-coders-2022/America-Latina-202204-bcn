@@ -1,20 +1,27 @@
-import { nextPageType, previousPageType } from "../actions/UiActionTypes";
+import {
+  nextPageType,
+  previousPageType,
+  modifyPropertyType,
+} from "../actions/UiActionTypes";
 
 const uiReducer = (currentUi, action) => {
   let newUi;
 
   switch (action.type) {
     case nextPageType:
-      if (!currentUi.lastPage) {
+      if (currentUi.currentPage + 1 !== currentUi.totalPages) {
         currentUi.currentPage += 1;
       }
       newUi = { ...currentUi };
       break;
     case previousPageType:
-      if (!currentUi.firstPage) {
+      if (currentUi.currentPage > 0) {
         currentUi.currentPage -= 1;
       }
       newUi = { ...currentUi };
+      break;
+    case modifyPropertyType:
+      newUi = { ...currentUi, ...action.propertyToModify };
       break;
     default:
       newUi = { ...currentUi };

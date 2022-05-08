@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
 import Button from "../Button/Button";
 import DetailedAlbum from "./DetailedAlbum";
-import AlbumContext from "../../store/contexts/AlbumContext";
+import UiProvider from "../../store/contexts/UiProvider";
 
 describe("Given a DetailedAlbum Component", () => {
   describe("When it's rendered", () => {
@@ -309,7 +309,9 @@ describe("Given a DetailedAlbum Component", () => {
 
       render(
         <AlbumProvider>
-          <Button type="modifyInfo" action={onClickAction} />
+          <UiProvider>
+            <Button type="modifyInfo" action={onClickAction} />
+          </UiProvider>
         </AlbumProvider>
       );
       const button = screen.getByRole("button");

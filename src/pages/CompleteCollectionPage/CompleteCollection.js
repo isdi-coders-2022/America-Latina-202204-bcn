@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Album from "../../component/Album/Album";
+import Paginator from "../../component/Paginator/Paginator";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import UiContext from "../../store/contexts/UiContext";
@@ -28,6 +29,7 @@ const CompleteCollection = () => {
               <Album albumInfo={album.album} />
             </Link>
           ))}
+      <Paginator />
     </>
   );
 };
