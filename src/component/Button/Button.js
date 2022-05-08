@@ -8,6 +8,9 @@ const PaginationButton = styled.button`
   border-style: none;
   font-weight: bold;
   font-size: 20px;
+  position: relative;
+  left: 200px;
+  margin-bottom: 10px;
 `;
 
 const ModifyInfoButton = styled.button`
