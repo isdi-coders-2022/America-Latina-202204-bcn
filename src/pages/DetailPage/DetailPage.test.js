@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
-import UiProvider from "../../store/contexts/uiProvider";
+import UiProvider from "../../store/contexts/UiProvider";
 import DetailPage from "./DetailPage";
 
 describe("Given a DetailPage Component", () => {
