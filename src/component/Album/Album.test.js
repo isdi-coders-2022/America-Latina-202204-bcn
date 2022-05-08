@@ -1,4 +1,4 @@
-import { getByText, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Album from "./Album";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
 import UiProvider from "../../store/contexts/UiProvider";

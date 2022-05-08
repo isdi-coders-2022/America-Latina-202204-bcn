@@ -1,10 +1,4 @@
 import styled from "styled-components";
-import { useContext } from "react";
-import UiContext from "../../store/contexts/UiContext";
-import {
-  nextPageAction,
-  previousPageAction,
-} from "../../store/actions/UiActionCreator";
 
 const PaginatorContainer = styled.div`
   display: flex;
@@ -14,7 +8,6 @@ const PaginatorContainer = styled.div`
 `;
 
 const Paginator = ({ firstAction, secondAction }) => {
-  const { uiDispatch } = useContext(UiContext);
   return (
     <>
       <PaginatorContainer>
