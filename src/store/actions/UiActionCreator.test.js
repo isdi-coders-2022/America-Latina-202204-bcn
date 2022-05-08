@@ -36,7 +36,7 @@ describe("Given the modifyPropertyAction", () => {
 
       const expectedObject = {
         type: "modify-property",
-        ...propertyToModify,
+        propertyToModify,
       };
 
       expect(createdAction).toMatchObject(expectedObject);

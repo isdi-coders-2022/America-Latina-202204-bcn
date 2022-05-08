@@ -14,5 +14,5 @@ export const nextPageAction = () => ({
 
 export const modifyPropertyAction = (propertyToModify) => ({
   type: modifyPropertyType,
-  ...propertyToModify,
+  propertyToModify: propertyToModify,
 });
