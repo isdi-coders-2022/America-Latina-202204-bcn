@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import AlbumProvider from "./store/contexts/AlbumProvider";
+import UiProvider from "./store/contexts/UiProvider";
 import reportWebVitals from "./reportWebVitals";
 import "@fontsource/open-sans";
 import "./index.css";
@@ -12,9 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AlbumProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <UiProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </UiProvider>
     </AlbumProvider>
   </React.StrictMode>
 );
