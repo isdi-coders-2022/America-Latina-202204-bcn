@@ -9,13 +9,13 @@ const uiReducer = (currentUi, action) => {
 
   switch (action.type) {
     case nextPageType:
-      if (!currentUi.lastPage) {
+      if (currentUi.currentPage + 1 !== currentUi.totalPages) {
         currentUi.currentPage += 1;
       }
       newUi = { ...currentUi };
       break;
     case previousPageType:
-      if (!currentUi.firstPage) {
+      if (currentUi.currentPage > 0) {
         currentUi.currentPage -= 1;
       }
       newUi = { ...currentUi };
