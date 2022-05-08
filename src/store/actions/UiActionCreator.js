@@ -1,4 +1,8 @@
-import { previousPageType, nextPageType } from "./UiActionTypes";
+import {
+  previousPageType,
+  nextPageType,
+  modifyPropertyType,
+} from "./UiActionTypes";
 
 export const previousPageAction = () => ({
   type: previousPageType,
@@ -6,4 +10,9 @@ export const previousPageAction = () => ({
 
 export const nextPageAction = () => ({
   type: nextPageType,
+});
+
+export const modifyPropertyAction = (propertyToModify) => ({
+  type: modifyPropertyType,
+  ...propertyToModify,
 });

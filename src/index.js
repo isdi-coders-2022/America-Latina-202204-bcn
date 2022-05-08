@@ -12,13 +12,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <AlbumProvider>
-      <UiProvider>
+    <UiProvider>
+      <AlbumProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </UiProvider>
-    </AlbumProvider>
+      </AlbumProvider>
+    </UiProvider>
   </React.StrictMode>
 );
 

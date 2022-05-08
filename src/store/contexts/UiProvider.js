@@ -7,6 +7,7 @@ const initialUi = {
   albumsPerPage: 4,
   firstPage: true,
   lastPage: false,
+  totalPages: 1,
 };
 
 const UiProvider = ({ children }) => {
