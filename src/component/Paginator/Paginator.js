@@ -14,12 +14,14 @@ const Paginator = () => {
         className="fa-solid fa-arrow-left"
         onClick={() => {
           uiDispatch(previousPageAction());
+          window.scrollTo(0, 0);
         }}
       ></i>
       <i
         className="fa-solid fa-arrow-right"
         onClick={() => {
           uiDispatch(nextPageAction());
+          window.scrollTo(0, 0);
         }}
       ></i>
     </>
