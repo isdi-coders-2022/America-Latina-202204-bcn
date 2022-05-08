@@ -1,15 +1,17 @@
 import { render, screen } from "@testing-library/react";
+import reactTestRenderer from "react-test-renderer";
 import Button from "./Button";
 
 describe("Given a Button component", () => {
   describe("When it receives a type pagination text containing 'Next Page'", () => {
-    test("Then it should render the text in a button", () => {
+    test("Then it should render the text 'Next Page' in a button", () => {
       const inputText = "Next Page";
 
-      render(<Button type="pagination" text={inputText} />);
-      const searchedResult = screen.getByText(inputText);
+      const tree = reactTestRenderer
+        .create(<Button type="pagination" text={inputText} />)
+        .toJSON();
 
-      expect(searchedResult).toBeInTheDocument();
+      expect(tree).toMatchSnapshot();
     });
   });
   describe("When it receives a type modifyInfo text containing 'Add to collection", () => {
