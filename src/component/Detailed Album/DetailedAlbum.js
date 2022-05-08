@@ -18,12 +18,13 @@ const DetailedAlbumContainer = styled.div`
   }
   h6.detailed_album--info {
     display: flex;
-    justify-content: space-evenly;
     margin: 10px;
     width: 100%;
     font-size: 15px;
     margin-top: 0px;
     margin-bottom: 0px;
+    justify-content: center;
+    display: contents;
   }
 
   .detailed_album--title span {
@@ -86,8 +87,12 @@ const DetailedAlbum = ({ albumInfo }) => {
 
           <img src={albumInfo.image[2]["#text"]} alt={albumInfo.name} />
           <h6 className="detailed_album--info">
-            <span>Genre: {albumInfo.tags.tag[2].name}</span>
-            <span>Release Date: {albumInfo.wiki.published}</span>
+            <span>
+              Genre:{" "}
+              {albumInfo.tags.tag[2].name.charAt(0).toUpperCase() +
+                albumInfo.tags.tag[2].name.slice(1)}
+            </span>
+            <span>Release Date: {albumInfo.wiki.published.slice(0, -7)}</span>
           </h6>
           <h6 className="detailed_album--tracklist">Summary</h6>
           <p>{albumInfo.wiki.summary.slice(0, -100)}</p>

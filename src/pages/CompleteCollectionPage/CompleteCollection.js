@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Album from "../../component/Album/Album";
+import Paginator from "../../component/Paginator/Paginator";
 import styled from "styled-components";
 import AlbumContext from "../../store/contexts/AlbumContext";
 import UiContext from "../../store/contexts/UiContext";
@@ -33,22 +34,7 @@ const CompleteCollection = () => {
               <Album albumInfo={album.album} />
             </Link>
           ))}
-      {ui.currentPage >= 1 && (
-        <Button
-          type="pagination"
-          text="Previous Page"
-          action={() => {
-            uiDispatch(previousPageAction(albums));
-          }}
-        />
-      )}
-      <Button
-        type="pagination"
-        text="Next Page"
-        action={() => {
-          uiDispatch(nextPageAction(albums));
-        }}
-      />
+      <Paginator />
     </>
   );
 };

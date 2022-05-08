@@ -49,7 +49,7 @@ const Album = ({ albumInfo }) => {
         }}
       />
       <i
-        className="fa-solid fa-heart-circle-plus"
+        className="fa-solid fa-trash-can"
         onClick={() => {
           myCollectionDispatch(
             deleteAlbumsAction(`${albumInfo.artist}-${albumInfo.name}`)

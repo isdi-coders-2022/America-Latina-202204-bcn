@@ -1,4 +1,4 @@
-import AlbumsContext from "./AlbumContext";
+import AlbumContext from "./AlbumContext";
 import { useEffect, useReducer } from "react";
 import albumReducer from "../reducers/albumReducer";
 import { loadAlbumsAction } from "../actions/AlbumsActionCreator";
@@ -7,6 +7,7 @@ const AlbumProvider = ({ children }) => {
   const [albums, dispatch] = useReducer(albumReducer, []);
   const [detail, detailDispatch] = useReducer(albumReducer, [1]);
   const [myCollection, myCollectionDispatch] = useReducer(albumReducer, []);
+
   useEffect(() => {
     const apiKey = `0ceed9a664f141e91291c54a6c867b86`;
     const getAlbumData = async (tag) => {
@@ -30,7 +31,7 @@ const AlbumProvider = ({ children }) => {
     getAlbumData("blues");
   }, []);
   return (
-    <AlbumsContext.Provider
+    <AlbumContext.Provider
       value={{
         albums,
         dispatch,
@@ -41,7 +42,7 @@ const AlbumProvider = ({ children }) => {
       }}
     >
       {children}
-    </AlbumsContext.Provider>
+    </AlbumContext.Provider>
   );
 };
 

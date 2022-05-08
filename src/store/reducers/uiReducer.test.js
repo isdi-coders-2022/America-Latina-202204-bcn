@@ -1,4 +1,8 @@
-import { nextPageAction, previousPageAction } from "../actions/UiActionCreator";
+import {
+  nextPageAction,
+  previousPageAction,
+  modifyPropertyAction,
+} from "../actions/UiActionCreator";
 import uiReducer from "./uiReducer";
 
 const pageData = {
@@ -6,9 +10,10 @@ const pageData = {
   albumsPerPage: 4,
   firstPage: false,
   lastPage: false,
+  totalPages: 10,
 };
 
-describe("Given the nextPageFunction passed on to the reducer, with the property currentPage: 2", () => {
+describe("Given the nextPageAction passed on to the reducer, with the property currentPage: 2", () => {
   describe("When the initial state contains the property lastPage: false", () => {
     test("Then it will return the same initial object, but with the property currentPage:3", () => {
       const originalState = pageData;
@@ -24,7 +29,21 @@ describe("Given the nextPageFunction passed on to the reducer, with the property
   });
 });
 
-describe("Given the previousPageFunction passed on to the reducer, with the property currentPage: 2", () => {
+describe("Given the modifyPropertyAction passed on to the reducer, with the property totalPages: 10", () => {
+  describe("When the parameter {totalPages: 20} is inputted to modifyPropertyAction", () => {
+    test("Then it will return the same initial object, but with the property totalPages:20", () => {
+      const originalState = pageData;
+      const propertyToBeModified = { totalPages: 20 };
+
+      const usedAction = modifyPropertyAction(propertyToBeModified);
+      const newObject = uiReducer(originalState, usedAction);
+      const expectedObject = { ...originalState, ...propertyToBeModified };
+      expect(newObject).toEqual(expectedObject);
+    });
+  });
+});
+
+describe("Given the previousPageAction passed on to the reducer, with the property currentPage: 2", () => {
   describe("When the initial state contains the property firstPage: false", () => {
     test("Then it will return the same initial object, but with the property currentPage:1", () => {
       const originalState = pageData;
