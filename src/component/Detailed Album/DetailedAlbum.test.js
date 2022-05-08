@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import AlbumProvider from "../../store/contexts/AlbumProvider";
 import Button from "../Button/Button";
 import DetailedAlbum from "./DetailedAlbum";
-import UiProvider from "../../store/contexts/uiProvider";
+import UiProvider from "../../store/contexts/UiProvider";
 
 describe("Given a DetailedAlbum Component", () => {
   describe("When it's rendered", () => {
