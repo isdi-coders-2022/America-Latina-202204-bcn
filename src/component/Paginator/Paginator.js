@@ -1,12 +1,4 @@
-
 import styled from "styled-components";
-import { useContext } from "react";
-import UiContext from "../../store/contexts/UiContext";
-import {
-  nextPageAction,
-  previousPageAction,
-} from "../../store/actions/UiActionCreator";
-
 
 const PaginatorContainer = styled.div`
   display: flex;
@@ -15,26 +7,16 @@ const PaginatorContainer = styled.div`
   margin-bottom: 15px;
 `;
 
-
-const Paginator = () => {
-  const { uiDispatch } = useContext(UiContext);
+const Paginator = ({ firstAction, secondAction }) => {
   return (
     <>
       <PaginatorContainer>
-        <i
-          className="fa-solid fa-arrow-left"
-          onClick={() => {
-            uiDispatch(previousPageAction());
-            window.scrollTo(0, 0);
-          }}
-        ></i>
-        <i
-          className="fa-solid fa-arrow-right"
-          onClick={() => {
-            uiDispatch(nextPageAction());
-            window.scrollTo(0, 0);
-          }}
-        ></i>
+        <i className="fa-solid fa-arrow-left" onClick={firstAction}>
+          Previous
+        </i>
+        <i className="fa-solid fa-arrow-right" onClick={secondAction}>
+          Next
+        </i>
       </PaginatorContainer>
     </>
   );

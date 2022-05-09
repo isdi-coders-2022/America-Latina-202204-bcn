@@ -73,5 +73,16 @@ describe("Given the Album component", () => {
       expect(searchedFirstHeader.textContent).toBe(expectedFirstHeader);
       expect(searchedSecondHeader.textContent).toBe(expectedSecondHeader);
     });
+    test("Then an icon with the text DELETE will be rendered", () => {
+      const expectedText = "DELETE";
+      render(
+        <AlbumProvider>
+          <Album albumInfo={album} />
+        </AlbumProvider>
+      );
+      const searchedIcon = screen.getByText(expectedText);
+
+      expect(searchedIcon.textContent).toBe(expectedText);
+    });
   });
 });

@@ -58,3 +58,34 @@ describe("Given the previousPageAction passed on to the reducer, with the proper
     });
   });
 });
+
+describe("Given an action 'new-action' passed on to the reducer", () => {
+  describe("When the initial state is the mentioned pageData", () => {
+    test("Then it will return the same initial object", () => {
+      const originalState = pageData;
+
+      const usedAction = { type: "new-action" };
+      const newObject = uiReducer(originalState, usedAction);
+
+      const expectedArray = { ...originalState };
+
+      expect(newObject).toEqual(expectedArray);
+    });
+  });
+});
+
+describe("Given the previousPageAction passed on to the reducer, with the property currentPage: 1", () => {
+  describe("When the initial state contains the property firstPage: false", () => {
+    test("Then it will return the same initial object, but with the property currentPage:1", () => {
+      const originalState = { ...pageData, currentPage: 0 };
+      const expectedPage = originalState.currentPage;
+
+      const usedAction = previousPageAction();
+      const newObject = uiReducer(originalState, usedAction);
+
+      const expectedArray = { ...originalState, currentPage: expectedPage };
+
+      expect(newObject).toEqual(expectedArray);
+    });
+  });
+});

@@ -21,4 +21,23 @@ describe("Given a CompleteCollectionPage Component", () => {
       expect(searchResult).toBeInTheDocument();
     });
   });
+  describe("When it is instantiated", () => {
+    test("Then it will render a paginator component", () => {
+      const searchedFirstText = "Previous";
+      const searchedSecondText = "Next";
+      render(
+        <AlbumProvider>
+          <UiProvider>
+            <BrowserRouter>
+              <CompleteCollection />
+            </BrowserRouter>
+          </UiProvider>
+        </AlbumProvider>
+      );
+      const searchFirstResult = screen.getByText(searchedFirstText);
+      const searchSecondResult = screen.getByText(searchedSecondText);
+      expect(searchFirstResult).toBeInTheDocument();
+      expect(searchSecondResult).toBeInTheDocument();
+    });
+  });
 });
